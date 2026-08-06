@@ -1,0 +1,21 @@
+.pio
+.env
+.venv/
+.python-version
+
+# Onshape URDF directory (ignore STL models but keep robot.urdf and config.json)
+onshape_robot/
+!onshape_robot/robot.urdf
+!onshape_robot/config.json
+
+# Ignore all simulation output renders
+sim_output/
+
+# Ignore heavy media and documents universally
+*.mp4
+*.gif
+*.pdf
+
+# Python cache
+__pycache__/
+*.pyc

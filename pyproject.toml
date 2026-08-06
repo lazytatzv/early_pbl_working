@@ -1,0 +1,14 @@
+[project]
+name = "early-pbl-working"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "matplotlib>=3.9.4",
+    "numpy>=2.0.2",
+    "pillow>=11.3.0",
+    "platformio",
+    "pyyaml>=6.0.1",
+    "onshape-to-robot>=1.8.2",
+]

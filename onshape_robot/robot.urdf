@@ -1,0 +1,2509 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape document_id: 000000000000000000000000 / workspace_id: 000000000000000000000000 -->
+<robot name="onshape_robot">
+  <!-- Link base_link -->
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+  </link>
+  <!-- Link body_top_v1 -->
+  <link name="body_top_v1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+  </link>
+  <!-- Link body_top_v1_body_top_v1 -->
+  <link name="body_top_v1_body_top_v1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part body_top_v1 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/body_top_v1.stl"/>
+      </geometry>
+      <material name="body_top_v1_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/body_top_v1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from body_top_v1 to body_top_v1_body_top_v1 -->
+  <joint name="body_top_v1_body_top_v1_fixed" type="fixed">
+    <origin xyz="-0.04 -0.0075 0.0625" rpy="0 -0 0"/>
+    <parent link="body_top_v1"/>
+    <child link="body_top_v1_body_top_v1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from base_link to body_top_v1 -->
+  <joint name="base_link_to_body_top_v1" type="fixed">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <parent link="base_link"/>
+    <child link="body_top_v1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99 -->
+  <link name="leg_assembly_v99">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+  </link>
+  <!-- Link leg_assembly_v99_leg1_left_v32 -->
+  <link name="leg_assembly_v99_leg1_left_v32">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg1_left_v32 -->
+    <visual>
+      <origin xyz="-0 0 -0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_left_v32.stl"/>
+      </geometry>
+      <material name="leg1_left_v32_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 -0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_left_v32.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99 to leg_assembly_v99_leg1_left_v32 -->
+  <joint name="leg_assembly_v99_leg1_left_v32_fixed" type="fixed">
+    <origin xyz="0.088381 0.0580461 -0.0065" rpy="0 -0 0.785398"/>
+    <parent link="leg_assembly_v99"/>
+    <child link="leg_assembly_v99_leg1_left_v32"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99_leg1_top_2_v64 -->
+  <link name="leg_assembly_v99_leg1_top_2_v64">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg1_top_2_v64 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_top_2_v64.stl"/>
+      </geometry>
+      <material name="leg1_top_2_v64_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_top_2_v64.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99 to leg_assembly_v99_leg1_top_2_v64 -->
+  <joint name="leg_assembly_v99_leg1_top_2_v64_fixed" type="fixed">
+    <origin xyz="0.0142055 0.0393785 -0.0065" rpy="0 -0 0.785398"/>
+    <parent link="leg_assembly_v99"/>
+    <child link="leg_assembly_v99_leg1_top_2_v64"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99_leg1_top_2_v64_2 -->
+  <link name="leg_assembly_v99_leg1_top_2_v64_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg1_top_2_v64_2 -->
+    <visual>
+      <origin xyz="0 0 -0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_top_2_v64.stl"/>
+      </geometry>
+      <material name="leg1_top_2_v64_2_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_top_2_v64.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99 to leg_assembly_v99_leg1_top_2_v64_2 -->
+  <joint name="leg_assembly_v99_leg1_top_2_v64_2_fixed" type="fixed">
+    <origin xyz="0.0141348 0.0390957 0.04245" rpy="0 -0 0.785398"/>
+    <parent link="leg_assembly_v99"/>
+    <child link="leg_assembly_v99_leg1_top_2_v64_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99_leg1_right_v18 -->
+  <link name="leg_assembly_v99_leg1_right_v18">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg1_right_v18 -->
+    <visual>
+      <origin xyz="0 -0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_right_v18.stl"/>
+      </geometry>
+      <material name="leg1_right_v18_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_right_v18.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99 to leg_assembly_v99_leg1_right_v18 -->
+  <joint name="leg_assembly_v99_leg1_right_v18_fixed" type="fixed">
+    <origin xyz="0.0623948 0.0840323 -0.0065" rpy="0 -0 0.785398"/>
+    <parent link="leg_assembly_v99"/>
+    <child link="leg_assembly_v99_leg1_right_v18"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99_leg1_center_v26 -->
+  <link name="leg_assembly_v99_leg1_center_v26">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg1_center_v26 -->
+    <visual>
+      <origin xyz="-0 -0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_center_v26.stl"/>
+      </geometry>
+      <material name="leg1_center_v26_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_center_v26.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99 to leg_assembly_v99_leg1_center_v26 -->
+  <joint name="leg_assembly_v99_leg1_center_v26_fixed" type="fixed">
+    <origin xyz="0.088381 0.0580461 -0.01005" rpy="1.5708 -0 2.35619"/>
+    <parent link="leg_assembly_v99"/>
+    <child link="leg_assembly_v99_leg1_center_v26"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99_leg2_side_2_v18 -->
+  <link name="leg_assembly_v99_leg2_side_2_v18">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg2_side_2_v18 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_side_2_v18.stl"/>
+      </geometry>
+      <material name="leg2_side_2_v18_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_side_2_v18.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99 to leg_assembly_v99_leg2_side_2_v18 -->
+  <joint name="leg_assembly_v99_leg2_side_2_v18_fixed" type="fixed">
+    <origin xyz="0.125367 0.0815265 0.0459625" rpy="-1.5708 0 -2.35619"/>
+    <parent link="leg_assembly_v99"/>
+    <child link="leg_assembly_v99_leg2_side_2_v18"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99_leg2_2_center_v12 -->
+  <link name="leg_assembly_v99_leg2_2_center_v12">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg2_2_center_v12 -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_2_center_v12.stl"/>
+      </geometry>
+      <material name="leg2_2_center_v12_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_2_center_v12.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99 to leg_assembly_v99_leg2_2_center_v12 -->
+  <joint name="leg_assembly_v99_leg2_2_center_v12_fixed" type="fixed">
+    <origin xyz="0.0735931 0.109656 -0.05668" rpy="2.35619 1.5708 0"/>
+    <parent link="leg_assembly_v99"/>
+    <child link="leg_assembly_v99_leg2_2_center_v12"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99_leg2_1_center_v7 -->
+  <link name="leg_assembly_v99_leg2_1_center_v7">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg2_1_center_v7 -->
+    <visual>
+      <origin xyz="0 0 -0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_1_center_v7.stl"/>
+      </geometry>
+      <material name="leg2_1_center_v7_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_1_center_v7.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99 to leg_assembly_v99_leg2_1_center_v7 -->
+  <joint name="leg_assembly_v99_leg2_1_center_v7_fixed" type="fixed">
+    <origin xyz="0.106982 0.0596062 -0.0465375" rpy="0 -0 0.785398"/>
+    <parent link="leg_assembly_v99"/>
+    <child link="leg_assembly_v99_leg2_1_center_v7"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99_leg2_side_2_v18_2 -->
+  <link name="leg_assembly_v99_leg2_side_2_v18_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg2_side_2_v18_2 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_side_2_v18.stl"/>
+      </geometry>
+      <material name="leg2_side_2_v18_2_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_side_2_v18.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99 to leg_assembly_v99_leg2_side_2_v18_2 -->
+  <joint name="leg_assembly_v99_leg2_side_2_v18_2_fixed" type="fixed">
+    <origin xyz="0.0854156 0.121478 0.0459625" rpy="-1.5708 0 -2.35619"/>
+    <parent link="leg_assembly_v99"/>
+    <child link="leg_assembly_v99_leg2_side_2_v18_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99_コンポーネント2 -->
+  <link name="leg_assembly_v99_コンポーネント2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part コンポーネント2 -->
+    <visual>
+      <origin xyz="0 0 -0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント2.stl"/>
+      </geometry>
+      <material name="コンポーネント2_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99 to leg_assembly_v99_コンポーネント2 -->
+  <joint name="leg_assembly_v99_コンポーネント2_fixed" type="fixed">
+    <origin xyz="0.104043 0.0829009 0.0498" rpy="-1.5708 -0 0.785398"/>
+    <parent link="leg_assembly_v99"/>
+    <child link="leg_assembly_v99_コンポーネント2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99_コンポーネント1 -->
+  <link name="leg_assembly_v99_コンポーネント1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part コンポーネント1 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1.stl"/>
+      </geometry>
+      <material name="コンポーネント1_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99 to leg_assembly_v99_コンポーネント1 -->
+  <joint name="leg_assembly_v99_コンポーネント1_fixed" type="fixed">
+    <origin xyz="0.116135 0.0949924 0.04245" rpy="-1.5708 -0 0.785398"/>
+    <parent link="leg_assembly_v99"/>
+    <child link="leg_assembly_v99_コンポーネント1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99_コンポーネント1_2 -->
+  <link name="leg_assembly_v99_コンポーネント1_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part コンポーネント1_2 -->
+    <visual>
+      <origin xyz="0 0 -0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1__2.stl"/>
+      </geometry>
+      <material name="コンポーネント1_2_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1__2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99 to leg_assembly_v99_コンポーネント1_2 -->
+  <joint name="leg_assembly_v99_コンポーネント1_2_fixed" type="fixed">
+    <origin xyz="0.0742035 0.10673 0.035375" rpy="0.785398 1.5708 0"/>
+    <parent link="leg_assembly_v99"/>
+    <child link="leg_assembly_v99_コンポーネント1_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from base_link to leg_assembly_v99 -->
+  <joint name="base_link_to_leg_assembly_v99" type="fixed">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <parent link="base_link"/>
+    <child link="leg_assembly_v99"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__1 -->
+  <link name="leg_assembly_v99__1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+  </link>
+  <!-- Link leg_assembly_v99__1_leg1_top_2_v64_3 -->
+  <link name="leg_assembly_v99__1_leg1_top_2_v64_3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg1_top_2_v64_3 -->
+    <visual>
+      <origin xyz="-0 0 -0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_top_2_v64.stl"/>
+      </geometry>
+      <material name="leg1_top_2_v64_3_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 -0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_top_2_v64.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__1 to leg_assembly_v99__1_leg1_top_2_v64_3 -->
+  <joint name="leg_assembly_v99__1_leg1_top_2_v64_3_fixed" type="fixed">
+    <origin xyz="-0.0141348 -0.0390957 0.04245" rpy="0 -0 -2.35619"/>
+    <parent link="leg_assembly_v99__1"/>
+    <child link="leg_assembly_v99__1_leg1_top_2_v64_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__1_leg1_left_v32_2 -->
+  <link name="leg_assembly_v99__1_leg1_left_v32_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg1_left_v32_2 -->
+    <visual>
+      <origin xyz="-0 0 -0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_left_v32.stl"/>
+      </geometry>
+      <material name="leg1_left_v32_2_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 -0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_left_v32.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__1 to leg_assembly_v99__1_leg1_left_v32_2 -->
+  <joint name="leg_assembly_v99__1_leg1_left_v32_2_fixed" type="fixed">
+    <origin xyz="-0.088381 -0.0580461 -0.0065" rpy="0 -0 -2.35619"/>
+    <parent link="leg_assembly_v99__1"/>
+    <child link="leg_assembly_v99__1_leg1_left_v32_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__1_leg1_top_2_v64_4 -->
+  <link name="leg_assembly_v99__1_leg1_top_2_v64_4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg1_top_2_v64_4 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_top_2_v64.stl"/>
+      </geometry>
+      <material name="leg1_top_2_v64_4_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_top_2_v64.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__1 to leg_assembly_v99__1_leg1_top_2_v64_4 -->
+  <joint name="leg_assembly_v99__1_leg1_top_2_v64_4_fixed" type="fixed">
+    <origin xyz="-0.0142055 -0.0393785 -0.0065" rpy="0 -0 -2.35619"/>
+    <parent link="leg_assembly_v99__1"/>
+    <child link="leg_assembly_v99__1_leg1_top_2_v64_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__1_leg1_center_v26_2 -->
+  <link name="leg_assembly_v99__1_leg1_center_v26_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg1_center_v26_2 -->
+    <visual>
+      <origin xyz="-0 -0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_center_v26.stl"/>
+      </geometry>
+      <material name="leg1_center_v26_2_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_center_v26.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__1 to leg_assembly_v99__1_leg1_center_v26_2 -->
+  <joint name="leg_assembly_v99__1_leg1_center_v26_2_fixed" type="fixed">
+    <origin xyz="-0.088381 -0.0580461 -0.01005" rpy="1.5708 -0 -0.785398"/>
+    <parent link="leg_assembly_v99__1"/>
+    <child link="leg_assembly_v99__1_leg1_center_v26_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__1_leg1_right_v18_2 -->
+  <link name="leg_assembly_v99__1_leg1_right_v18_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg1_right_v18_2 -->
+    <visual>
+      <origin xyz="0 -0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_right_v18.stl"/>
+      </geometry>
+      <material name="leg1_right_v18_2_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_right_v18.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__1 to leg_assembly_v99__1_leg1_right_v18_2 -->
+  <joint name="leg_assembly_v99__1_leg1_right_v18_2_fixed" type="fixed">
+    <origin xyz="-0.0623948 -0.0840323 -0.0065" rpy="0 -0 -2.35619"/>
+    <parent link="leg_assembly_v99__1"/>
+    <child link="leg_assembly_v99__1_leg1_right_v18_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__1_コンポーネント2_2 -->
+  <link name="leg_assembly_v99__1_コンポーネント2_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part コンポーネント2_2 -->
+    <visual>
+      <origin xyz="0 0 -0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント2.stl"/>
+      </geometry>
+      <material name="コンポーネント2_2_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__1 to leg_assembly_v99__1_コンポーネント2_2 -->
+  <joint name="leg_assembly_v99__1_コンポーネント2_2_fixed" type="fixed">
+    <origin xyz="-0.104043 -0.0829009 0.0498" rpy="-1.5708 -0 -2.35619"/>
+    <parent link="leg_assembly_v99__1"/>
+    <child link="leg_assembly_v99__1_コンポーネント2_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__1_leg2_side_2_v18_3 -->
+  <link name="leg_assembly_v99__1_leg2_side_2_v18_3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg2_side_2_v18_3 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_side_2_v18.stl"/>
+      </geometry>
+      <material name="leg2_side_2_v18_3_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_side_2_v18.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__1 to leg_assembly_v99__1_leg2_side_2_v18_3 -->
+  <joint name="leg_assembly_v99__1_leg2_side_2_v18_3_fixed" type="fixed">
+    <origin xyz="-0.125367 -0.0815265 0.0459625" rpy="-1.5708 0 0.785398"/>
+    <parent link="leg_assembly_v99__1"/>
+    <child link="leg_assembly_v99__1_leg2_side_2_v18_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__1_leg2_1_center_v7_2 -->
+  <link name="leg_assembly_v99__1_leg2_1_center_v7_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg2_1_center_v7_2 -->
+    <visual>
+      <origin xyz="0 0 -0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_1_center_v7.stl"/>
+      </geometry>
+      <material name="leg2_1_center_v7_2_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_1_center_v7.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__1 to leg_assembly_v99__1_leg2_1_center_v7_2 -->
+  <joint name="leg_assembly_v99__1_leg2_1_center_v7_2_fixed" type="fixed">
+    <origin xyz="-0.106982 -0.0596062 -0.0465375" rpy="0 -0 -2.35619"/>
+    <parent link="leg_assembly_v99__1"/>
+    <child link="leg_assembly_v99__1_leg2_1_center_v7_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__1_leg2_side_2_v18_4 -->
+  <link name="leg_assembly_v99__1_leg2_side_2_v18_4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg2_side_2_v18_4 -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_side_2_v18.stl"/>
+      </geometry>
+      <material name="leg2_side_2_v18_4_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_side_2_v18.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__1 to leg_assembly_v99__1_leg2_side_2_v18_4 -->
+  <joint name="leg_assembly_v99__1_leg2_side_2_v18_4_fixed" type="fixed">
+    <origin xyz="-0.0854156 -0.121478 0.0459625" rpy="-1.5708 0 0.785398"/>
+    <parent link="leg_assembly_v99__1"/>
+    <child link="leg_assembly_v99__1_leg2_side_2_v18_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__1_leg2_2_center_v12_2 -->
+  <link name="leg_assembly_v99__1_leg2_2_center_v12_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg2_2_center_v12_2 -->
+    <visual>
+      <origin xyz="-0 -0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_2_center_v12.stl"/>
+      </geometry>
+      <material name="leg2_2_center_v12_2_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_2_center_v12.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__1 to leg_assembly_v99__1_leg2_2_center_v12_2 -->
+  <joint name="leg_assembly_v99__1_leg2_2_center_v12_2_fixed" type="fixed">
+    <origin xyz="-0.0735931 -0.109656 -0.05668" rpy="-0.785398 1.5708 0"/>
+    <parent link="leg_assembly_v99__1"/>
+    <child link="leg_assembly_v99__1_leg2_2_center_v12_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__1_コンポーネント1_3 -->
+  <link name="leg_assembly_v99__1_コンポーネント1_3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part コンポーネント1_3 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1.stl"/>
+      </geometry>
+      <material name="コンポーネント1_3_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__1 to leg_assembly_v99__1_コンポーネント1_3 -->
+  <joint name="leg_assembly_v99__1_コンポーネント1_3_fixed" type="fixed">
+    <origin xyz="-0.116135 -0.0949924 0.04245" rpy="-1.5708 -0 -2.35619"/>
+    <parent link="leg_assembly_v99__1"/>
+    <child link="leg_assembly_v99__1_コンポーネント1_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__1_コンポーネント1_4 -->
+  <link name="leg_assembly_v99__1_コンポーネント1_4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part コンポーネント1_4 -->
+    <visual>
+      <origin xyz="0 0 -0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1__2.stl"/>
+      </geometry>
+      <material name="コンポーネント1_4_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1__2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__1 to leg_assembly_v99__1_コンポーネント1_4 -->
+  <joint name="leg_assembly_v99__1_コンポーネント1_4_fixed" type="fixed">
+    <origin xyz="-0.0742035 -0.10673 0.035375" rpy="-2.35619 1.5708 0"/>
+    <parent link="leg_assembly_v99__1"/>
+    <child link="leg_assembly_v99__1_コンポーネント1_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from base_link to leg_assembly_v99__1 -->
+  <joint name="base_link_to_leg_assembly_v99__1" type="fixed">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <parent link="base_link"/>
+    <child link="leg_assembly_v99__1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__2 -->
+  <link name="leg_assembly_v99__2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+  </link>
+  <!-- Link leg_assembly_v99__2_leg1_top_2_v64_5 -->
+  <link name="leg_assembly_v99__2_leg1_top_2_v64_5">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg1_top_2_v64_5 -->
+    <visual>
+      <origin xyz="0 0 -0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_top_2_v64.stl"/>
+      </geometry>
+      <material name="leg1_top_2_v64_5_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_top_2_v64.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__2 to leg_assembly_v99__2_leg1_top_2_v64_5 -->
+  <joint name="leg_assembly_v99__2_leg1_top_2_v64_5_fixed" type="fixed">
+    <origin xyz="-0.0390957 0.0141348 0.04245" rpy="0 -0 2.35619"/>
+    <parent link="leg_assembly_v99__2"/>
+    <child link="leg_assembly_v99__2_leg1_top_2_v64_5"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__2_leg1_top_2_v64_6 -->
+  <link name="leg_assembly_v99__2_leg1_top_2_v64_6">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg1_top_2_v64_6 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_top_2_v64.stl"/>
+      </geometry>
+      <material name="leg1_top_2_v64_6_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_top_2_v64.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__2 to leg_assembly_v99__2_leg1_top_2_v64_6 -->
+  <joint name="leg_assembly_v99__2_leg1_top_2_v64_6_fixed" type="fixed">
+    <origin xyz="-0.0393785 0.0142055 -0.0065" rpy="0 -0 2.35619"/>
+    <parent link="leg_assembly_v99__2"/>
+    <child link="leg_assembly_v99__2_leg1_top_2_v64_6"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__2_leg1_center_v26_3 -->
+  <link name="leg_assembly_v99__2_leg1_center_v26_3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg1_center_v26_3 -->
+    <visual>
+      <origin xyz="-0 -0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_center_v26.stl"/>
+      </geometry>
+      <material name="leg1_center_v26_3_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_center_v26.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__2 to leg_assembly_v99__2_leg1_center_v26_3 -->
+  <joint name="leg_assembly_v99__2_leg1_center_v26_3_fixed" type="fixed">
+    <origin xyz="-0.0580461 0.088381 -0.01005" rpy="1.5708 -0 -2.35619"/>
+    <parent link="leg_assembly_v99__2"/>
+    <child link="leg_assembly_v99__2_leg1_center_v26_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__2_leg1_left_v32_3 -->
+  <link name="leg_assembly_v99__2_leg1_left_v32_3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg1_left_v32_3 -->
+    <visual>
+      <origin xyz="-0 0 -0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_left_v32.stl"/>
+      </geometry>
+      <material name="leg1_left_v32_3_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 -0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_left_v32.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__2 to leg_assembly_v99__2_leg1_left_v32_3 -->
+  <joint name="leg_assembly_v99__2_leg1_left_v32_3_fixed" type="fixed">
+    <origin xyz="-0.0580461 0.088381 -0.0065" rpy="0 -0 2.35619"/>
+    <parent link="leg_assembly_v99__2"/>
+    <child link="leg_assembly_v99__2_leg1_left_v32_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__2_leg1_right_v18_3 -->
+  <link name="leg_assembly_v99__2_leg1_right_v18_3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg1_right_v18_3 -->
+    <visual>
+      <origin xyz="-0 -0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_right_v18.stl"/>
+      </geometry>
+      <material name="leg1_right_v18_3_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_right_v18.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__2 to leg_assembly_v99__2_leg1_right_v18_3 -->
+  <joint name="leg_assembly_v99__2_leg1_right_v18_3_fixed" type="fixed">
+    <origin xyz="-0.0840323 0.0623948 -0.0065" rpy="0 -0 2.35619"/>
+    <parent link="leg_assembly_v99__2"/>
+    <child link="leg_assembly_v99__2_leg1_right_v18_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__2_leg2_side_2_v18_5 -->
+  <link name="leg_assembly_v99__2_leg2_side_2_v18_5">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg2_side_2_v18_5 -->
+    <visual>
+      <origin xyz="0 -0 -0" rpy="-0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_side_2_v18.stl"/>
+      </geometry>
+      <material name="leg2_side_2_v18_5_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 -0" rpy="-0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_side_2_v18.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__2 to leg_assembly_v99__2_leg2_side_2_v18_5 -->
+  <joint name="leg_assembly_v99__2_leg2_side_2_v18_5_fixed" type="fixed">
+    <origin xyz="-0.121478 0.0854156 0.0459625" rpy="-1.5708 0 -0.785398"/>
+    <parent link="leg_assembly_v99__2"/>
+    <child link="leg_assembly_v99__2_leg2_side_2_v18_5"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__2_leg2_side_2_v18_6 -->
+  <link name="leg_assembly_v99__2_leg2_side_2_v18_6">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg2_side_2_v18_6 -->
+    <visual>
+      <origin xyz="-0 0 -0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_side_2_v18.stl"/>
+      </geometry>
+      <material name="leg2_side_2_v18_6_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 -0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_side_2_v18.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__2 to leg_assembly_v99__2_leg2_side_2_v18_6 -->
+  <joint name="leg_assembly_v99__2_leg2_side_2_v18_6_fixed" type="fixed">
+    <origin xyz="-0.0815265 0.125367 0.0459625" rpy="-1.5708 0 -0.785398"/>
+    <parent link="leg_assembly_v99__2"/>
+    <child link="leg_assembly_v99__2_leg2_side_2_v18_6"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__2_leg2_2_center_v12_3 -->
+  <link name="leg_assembly_v99__2_leg2_2_center_v12_3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg2_2_center_v12_3 -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_2_center_v12.stl"/>
+      </geometry>
+      <material name="leg2_2_center_v12_3_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_2_center_v12.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__2 to leg_assembly_v99__2_leg2_2_center_v12_3 -->
+  <joint name="leg_assembly_v99__2_leg2_2_center_v12_3_fixed" type="fixed">
+    <origin xyz="-0.109656 0.0735931 -0.05668" rpy="0.785398 1.5708 0"/>
+    <parent link="leg_assembly_v99__2"/>
+    <child link="leg_assembly_v99__2_leg2_2_center_v12_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__2_leg2_1_center_v7_3 -->
+  <link name="leg_assembly_v99__2_leg2_1_center_v7_3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg2_1_center_v7_3 -->
+    <visual>
+      <origin xyz="-0 0 -0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_1_center_v7.stl"/>
+      </geometry>
+      <material name="leg2_1_center_v7_3_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 -0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_1_center_v7.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__2 to leg_assembly_v99__2_leg2_1_center_v7_3 -->
+  <joint name="leg_assembly_v99__2_leg2_1_center_v7_3_fixed" type="fixed">
+    <origin xyz="-0.0596062 0.106982 -0.0465375" rpy="0 -0 2.35619"/>
+    <parent link="leg_assembly_v99__2"/>
+    <child link="leg_assembly_v99__2_leg2_1_center_v7_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__2_コンポーネント2_3 -->
+  <link name="leg_assembly_v99__2_コンポーネント2_3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part コンポーネント2_3 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント2.stl"/>
+      </geometry>
+      <material name="コンポーネント2_3_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__2 to leg_assembly_v99__2_コンポーネント2_3 -->
+  <joint name="leg_assembly_v99__2_コンポーネント2_3_fixed" type="fixed">
+    <origin xyz="-0.0829009 0.104043 0.0498" rpy="-1.5708 -0 2.35619"/>
+    <parent link="leg_assembly_v99__2"/>
+    <child link="leg_assembly_v99__2_コンポーネント2_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__2_コンポーネント1_5 -->
+  <link name="leg_assembly_v99__2_コンポーネント1_5">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part コンポーネント1_5 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1.stl"/>
+      </geometry>
+      <material name="コンポーネント1_5_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__2 to leg_assembly_v99__2_コンポーネント1_5 -->
+  <joint name="leg_assembly_v99__2_コンポーネント1_5_fixed" type="fixed">
+    <origin xyz="-0.0949924 0.116135 0.04245" rpy="-1.5708 -0 2.35619"/>
+    <parent link="leg_assembly_v99__2"/>
+    <child link="leg_assembly_v99__2_コンポーネント1_5"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__2_コンポーネント1_6 -->
+  <link name="leg_assembly_v99__2_コンポーネント1_6">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part コンポーネント1_6 -->
+    <visual>
+      <origin xyz="0 0 -0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1__2.stl"/>
+      </geometry>
+      <material name="コンポーネント1_6_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1__2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__2 to leg_assembly_v99__2_コンポーネント1_6 -->
+  <joint name="leg_assembly_v99__2_コンポーネント1_6_fixed" type="fixed">
+    <origin xyz="-0.10673 0.0742035 0.035375" rpy="-0.785398 1.5708 0"/>
+    <parent link="leg_assembly_v99__2"/>
+    <child link="leg_assembly_v99__2_コンポーネント1_6"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from base_link to leg_assembly_v99__2 -->
+  <joint name="base_link_to_leg_assembly_v99__2" type="fixed">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <parent link="base_link"/>
+    <child link="leg_assembly_v99__2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__3 -->
+  <link name="leg_assembly_v99__3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+  </link>
+  <!-- Link leg_assembly_v99__3_leg1_top_2_v64_7 -->
+  <link name="leg_assembly_v99__3_leg1_top_2_v64_7">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg1_top_2_v64_7 -->
+    <visual>
+      <origin xyz="-0 0 -0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_top_2_v64.stl"/>
+      </geometry>
+      <material name="leg1_top_2_v64_7_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 -0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_top_2_v64.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__3 to leg_assembly_v99__3_leg1_top_2_v64_7 -->
+  <joint name="leg_assembly_v99__3_leg1_top_2_v64_7_fixed" type="fixed">
+    <origin xyz="0.0390957 -0.0141348 0.04245" rpy="0 -0 -0.785398"/>
+    <parent link="leg_assembly_v99__3"/>
+    <child link="leg_assembly_v99__3_leg1_top_2_v64_7"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__3_leg1_top_2_v64_8 -->
+  <link name="leg_assembly_v99__3_leg1_top_2_v64_8">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg1_top_2_v64_8 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_top_2_v64.stl"/>
+      </geometry>
+      <material name="leg1_top_2_v64_8_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_top_2_v64.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__3 to leg_assembly_v99__3_leg1_top_2_v64_8 -->
+  <joint name="leg_assembly_v99__3_leg1_top_2_v64_8_fixed" type="fixed">
+    <origin xyz="0.0393785 -0.0142055 -0.0065" rpy="0 -0 -0.785398"/>
+    <parent link="leg_assembly_v99__3"/>
+    <child link="leg_assembly_v99__3_leg1_top_2_v64_8"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__3_leg1_left_v32_4 -->
+  <link name="leg_assembly_v99__3_leg1_left_v32_4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg1_left_v32_4 -->
+    <visual>
+      <origin xyz="-0 0 -0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_left_v32.stl"/>
+      </geometry>
+      <material name="leg1_left_v32_4_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 -0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_left_v32.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__3 to leg_assembly_v99__3_leg1_left_v32_4 -->
+  <joint name="leg_assembly_v99__3_leg1_left_v32_4_fixed" type="fixed">
+    <origin xyz="0.0580461 -0.088381 -0.0065" rpy="0 -0 -0.785398"/>
+    <parent link="leg_assembly_v99__3"/>
+    <child link="leg_assembly_v99__3_leg1_left_v32_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__3_leg1_right_v18_4 -->
+  <link name="leg_assembly_v99__3_leg1_right_v18_4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg1_right_v18_4 -->
+    <visual>
+      <origin xyz="0 -0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_right_v18.stl"/>
+      </geometry>
+      <material name="leg1_right_v18_4_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_right_v18.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__3 to leg_assembly_v99__3_leg1_right_v18_4 -->
+  <joint name="leg_assembly_v99__3_leg1_right_v18_4_fixed" type="fixed">
+    <origin xyz="0.0840323 -0.0623948 -0.0065" rpy="0 -0 -0.785398"/>
+    <parent link="leg_assembly_v99__3"/>
+    <child link="leg_assembly_v99__3_leg1_right_v18_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__3_leg1_center_v26_4 -->
+  <link name="leg_assembly_v99__3_leg1_center_v26_4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg1_center_v26_4 -->
+    <visual>
+      <origin xyz="-0 -0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_center_v26.stl"/>
+      </geometry>
+      <material name="leg1_center_v26_4_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg1_center_v26.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__3 to leg_assembly_v99__3_leg1_center_v26_4 -->
+  <joint name="leg_assembly_v99__3_leg1_center_v26_4_fixed" type="fixed">
+    <origin xyz="0.0580461 -0.088381 -0.01005" rpy="1.5708 -0 0.785398"/>
+    <parent link="leg_assembly_v99__3"/>
+    <child link="leg_assembly_v99__3_leg1_center_v26_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__3_コンポーネント2_4 -->
+  <link name="leg_assembly_v99__3_コンポーネント2_4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part コンポーネント2_4 -->
+    <visual>
+      <origin xyz="0 0 -0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント2.stl"/>
+      </geometry>
+      <material name="コンポーネント2_4_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__3 to leg_assembly_v99__3_コンポーネント2_4 -->
+  <joint name="leg_assembly_v99__3_コンポーネント2_4_fixed" type="fixed">
+    <origin xyz="0.0829009 -0.104043 0.0498" rpy="-1.5708 -0 -0.785398"/>
+    <parent link="leg_assembly_v99__3"/>
+    <child link="leg_assembly_v99__3_コンポーネント2_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__3_leg2_2_center_v12_4 -->
+  <link name="leg_assembly_v99__3_leg2_2_center_v12_4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg2_2_center_v12_4 -->
+    <visual>
+      <origin xyz="-0 0 -0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_2_center_v12.stl"/>
+      </geometry>
+      <material name="leg2_2_center_v12_4_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 -0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_2_center_v12.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__3 to leg_assembly_v99__3_leg2_2_center_v12_4 -->
+  <joint name="leg_assembly_v99__3_leg2_2_center_v12_4_fixed" type="fixed">
+    <origin xyz="0.109656 -0.0735931 -0.05668" rpy="-2.35619 1.5708 0"/>
+    <parent link="leg_assembly_v99__3"/>
+    <child link="leg_assembly_v99__3_leg2_2_center_v12_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__3_leg2_1_center_v7_4 -->
+  <link name="leg_assembly_v99__3_leg2_1_center_v7_4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg2_1_center_v7_4 -->
+    <visual>
+      <origin xyz="0 0 -0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_1_center_v7.stl"/>
+      </geometry>
+      <material name="leg2_1_center_v7_4_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_1_center_v7.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__3 to leg_assembly_v99__3_leg2_1_center_v7_4 -->
+  <joint name="leg_assembly_v99__3_leg2_1_center_v7_4_fixed" type="fixed">
+    <origin xyz="0.0596062 -0.106982 -0.0465375" rpy="0 -0 -0.785398"/>
+    <parent link="leg_assembly_v99__3"/>
+    <child link="leg_assembly_v99__3_leg2_1_center_v7_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__3_leg2_side_2_v18_7 -->
+  <link name="leg_assembly_v99__3_leg2_side_2_v18_7">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg2_side_2_v18_7 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_side_2_v18.stl"/>
+      </geometry>
+      <material name="leg2_side_2_v18_7_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_side_2_v18.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__3 to leg_assembly_v99__3_leg2_side_2_v18_7 -->
+  <joint name="leg_assembly_v99__3_leg2_side_2_v18_7_fixed" type="fixed">
+    <origin xyz="0.121478 -0.0854156 0.0459625" rpy="-1.5708 0 2.35619"/>
+    <parent link="leg_assembly_v99__3"/>
+    <child link="leg_assembly_v99__3_leg2_side_2_v18_7"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__3_leg2_side_2_v18_8 -->
+  <link name="leg_assembly_v99__3_leg2_side_2_v18_8">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part leg2_side_2_v18_8 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_side_2_v18.stl"/>
+      </geometry>
+      <material name="leg2_side_2_v18_8_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/leg2_side_2_v18.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__3 to leg_assembly_v99__3_leg2_side_2_v18_8 -->
+  <joint name="leg_assembly_v99__3_leg2_side_2_v18_8_fixed" type="fixed">
+    <origin xyz="0.0815265 -0.125367 0.0459625" rpy="-1.5708 0 2.35619"/>
+    <parent link="leg_assembly_v99__3"/>
+    <child link="leg_assembly_v99__3_leg2_side_2_v18_8"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__3_コンポーネント1_7 -->
+  <link name="leg_assembly_v99__3_コンポーネント1_7">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part コンポーネント1_7 -->
+    <visual>
+      <origin xyz="0 0 -0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1__2.stl"/>
+      </geometry>
+      <material name="コンポーネント1_7_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1__2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__3 to leg_assembly_v99__3_コンポーネント1_7 -->
+  <joint name="leg_assembly_v99__3_コンポーネント1_7_fixed" type="fixed">
+    <origin xyz="0.10673 -0.0742035 0.035375" rpy="2.35619 1.5708 0"/>
+    <parent link="leg_assembly_v99__3"/>
+    <child link="leg_assembly_v99__3_コンポーネント1_7"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link leg_assembly_v99__3_コンポーネント1_8 -->
+  <link name="leg_assembly_v99__3_コンポーネント1_8">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part コンポーネント1_8 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1.stl"/>
+      </geometry>
+      <material name="コンポーネント1_8_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from leg_assembly_v99__3 to leg_assembly_v99__3_コンポーネント1_8 -->
+  <joint name="leg_assembly_v99__3_コンポーネント1_8_fixed" type="fixed">
+    <origin xyz="0.0949924 -0.116135 0.04245" rpy="-1.5708 -0 -0.785398"/>
+    <parent link="leg_assembly_v99__3"/>
+    <child link="leg_assembly_v99__3_コンポーネント1_8"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from base_link to leg_assembly_v99__3 -->
+  <joint name="base_link_to_leg_assembly_v99__3" type="fixed">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <parent link="base_link"/>
+    <child link="leg_assembly_v99__3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link body_bottom -->
+  <link name="body_bottom">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+  </link>
+  <!-- Link body_bottom_body_bottom -->
+  <link name="body_bottom_body_bottom">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part body_bottom -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/body_bottom.stl"/>
+      </geometry>
+      <material name="body_bottom_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/body_bottom.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from body_bottom to body_bottom_body_bottom -->
+  <joint name="body_bottom_body_bottom_fixed" type="fixed">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <parent link="body_bottom"/>
+    <child link="body_bottom_body_bottom"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from base_link to body_bottom -->
+  <joint name="base_link_to_body_bottom" type="fixed">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <parent link="base_link"/>
+    <child link="body_bottom"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link 電池ボックス入れ_v1 -->
+  <link name="電池ボックス入れ_v1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+  </link>
+  <!-- Link 電池ボックス入れ_v1_電池ボックス入れ_v1 -->
+  <link name="電池ボックス入れ_v1_電池ボックス入れ_v1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part 電池ボックス入れ_v1 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/電池ボックス入れ_v1.stl"/>
+      </geometry>
+      <material name="電池ボックス入れ_v1_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/電池ボックス入れ_v1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from 電池ボックス入れ_v1 to 電池ボックス入れ_v1_電池ボックス入れ_v1 -->
+  <joint name="電池ボックス入れ_v1_電池ボックス入れ_v1_fixed" type="fixed">
+    <origin xyz="-0.035 -0.035 -0.0248" rpy="0 -0 0"/>
+    <parent link="電池ボックス入れ_v1"/>
+    <child link="電池ボックス入れ_v1_電池ボックス入れ_v1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from base_link to 電池ボックス入れ_v1 -->
+  <joint name="base_link_to_電池ボックス入れ_v1" type="fixed">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <parent link="base_link"/>
+    <child link="電池ボックス入れ_v1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link 超音波センサの背もたれ_ver3__v1 -->
+  <link name="超音波センサの背もたれ_ver3__v1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+  </link>
+  <!-- Link 超音波センサの背もたれ_ver3__v1_超音波センサの背もたれ_ver3__v1 -->
+  <link name="超音波センサの背もたれ_ver3__v1_超音波センサの背もたれ_ver3__v1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part 超音波センサの背もたれ_ver3__v1 -->
+    <visual>
+      <origin xyz="0 -0 -0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/超音波センサの背もたれ_ver3__v1.stl"/>
+      </geometry>
+      <material name="超音波センサの背もたれ_ver3__v1_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 -0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/超音波センサの背もたれ_ver3__v1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from 超音波センサの背もたれ_ver3__v1 to 超音波センサの背もたれ_ver3__v1_超音波センサの背もたれ_ver3__v1 -->
+  <joint name="超音波センサの背もたれ_ver3__v1_超音波センサの背もたれ_ver3__v1_fixed" type="fixed">
+    <origin xyz="-0.006 -0.0449949 0.0496949" rpy="1.5708 -0 -0"/>
+    <parent link="超音波センサの背もたれ_ver3__v1"/>
+    <child link="超音波センサの背もたれ_ver3__v1_超音波センサの背もたれ_ver3__v1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from base_link to 超音波センサの背もたれ_ver3__v1 -->
+  <joint name="base_link_to_超音波センサの背もたれ_ver3__v1" type="fixed">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <parent link="base_link"/>
+    <child link="超音波センサの背もたれ_ver3__v1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link 超音波センサの台_ver2__v1 -->
+  <link name="超音波センサの台_ver2__v1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+  </link>
+  <!-- Link 超音波センサの台_ver2__v1_超音波センサの台_ver2__v1 -->
+  <link name="超音波センサの台_ver2__v1_超音波センサの台_ver2__v1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part 超音波センサの台_ver2__v1 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/超音波センサの台_ver2__v1.stl"/>
+      </geometry>
+      <material name="超音波センサの台_ver2__v1_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/超音波センサの台_ver2__v1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from 超音波センサの台_ver2__v1 to 超音波センサの台_ver2__v1_超音波センサの台_ver2__v1 -->
+  <joint name="超音波センサの台_ver2__v1_超音波センサの台_ver2__v1_fixed" type="fixed">
+    <origin xyz="0 -0.045 0.0472" rpy="0 -0 0"/>
+    <parent link="超音波センサの台_ver2__v1"/>
+    <child link="超音波センサの台_ver2__v1_超音波センサの台_ver2__v1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from base_link to 超音波センサの台_ver2__v1 -->
+  <joint name="base_link_to_超音波センサの台_ver2__v1" type="fixed">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <parent link="base_link"/>
+    <child link="超音波センサの台_ver2__v1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link body_side_v1 -->
+  <link name="body_side_v1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+  </link>
+  <!-- Link body_side_v1_body_side_v1 -->
+  <link name="body_side_v1_body_side_v1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part body_side_v1 -->
+    <visual>
+      <origin xyz="0 0 -0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/body_side_v1.stl"/>
+      </geometry>
+      <material name="body_side_v1_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/body_side_v1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from body_side_v1 to body_side_v1_body_side_v1 -->
+  <joint name="body_side_v1_body_side_v1_fixed" type="fixed">
+    <origin xyz="-0.0225 0.03 0.0025" rpy="1.5708 -0 -1.5708"/>
+    <parent link="body_side_v1"/>
+    <child link="body_side_v1_body_side_v1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from base_link to body_side_v1 -->
+  <joint name="base_link_to_body_side_v1" type="fixed">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <parent link="base_link"/>
+    <child link="body_side_v1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link body_side_v1_2 -->
+  <link name="body_side_v1_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+  </link>
+  <!-- Link body_side_v1_2_body_side_v1_2 -->
+  <link name="body_side_v1_2_body_side_v1_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part body_side_v1_2 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/body_side_v1.stl"/>
+      </geometry>
+      <material name="body_side_v1_2_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/body_side_v1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from body_side_v1_2 to body_side_v1_2_body_side_v1_2 -->
+  <joint name="body_side_v1_2_body_side_v1_2_fixed" type="fixed">
+    <origin xyz="0.025 0.03 0.0025" rpy="1.5708 -0 -1.5708"/>
+    <parent link="body_side_v1_2"/>
+    <child link="body_side_v1_2_body_side_v1_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from base_link to body_side_v1_2 -->
+  <joint name="base_link_to_body_side_v1_2" type="fixed">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <parent link="base_link"/>
+    <child link="body_side_v1_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link マイクロサーボの固定_v1 -->
+  <link name="マイクロサーボの固定_v1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+  </link>
+  <!-- Link マイクロサーボの固定_v1_microservo_case -->
+  <link name="マイクロサーボの固定_v1_microservo_case">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part microservo_case -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/microservo_case.stl"/>
+      </geometry>
+      <material name="microservo_case_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/microservo_case.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from マイクロサーボの固定_v1 to マイクロサーボの固定_v1_microservo_case -->
+  <joint name="マイクロサーボの固定_v1_microservo_case_fixed" type="fixed">
+    <origin xyz="-0.002 -0.04395 0.01" rpy="0 -0 1.5708"/>
+    <parent link="マイクロサーボの固定_v1"/>
+    <child link="マイクロサーボの固定_v1_microservo_case"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link マイクロサーボの固定_v1_コンポーネント1_9 -->
+  <link name="マイクロサーボの固定_v1_コンポーネント1_9">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part コンポーネント1_9 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1__3.stl"/>
+      </geometry>
+      <material name="コンポーネント1_9_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1__3.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from マイクロサーボの固定_v1 to マイクロサーボの固定_v1_コンポーネント1_9 -->
+  <joint name="マイクロサーボの固定_v1_コンポーネント1_9_fixed" type="fixed">
+    <origin xyz="0.0069 -0.02925 0.01" rpy="0 -0 1.5708"/>
+    <parent link="マイクロサーボの固定_v1"/>
+    <child link="マイクロサーボの固定_v1_コンポーネント1_9"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link マイクロサーボの固定_v1_コンポーネント1_10 -->
+  <link name="マイクロサーボの固定_v1_コンポーネント1_10">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part コンポーネント1_10 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="-0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1__4.stl"/>
+      </geometry>
+      <material name="コンポーネント1_10_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1__4.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from マイクロサーボの固定_v1 to マイクロサーボの固定_v1_コンポーネント1_10 -->
+  <joint name="マイクロサーボの固定_v1_コンポーネント1_10_fixed" type="fixed">
+    <origin xyz="-0 -0.035 0.0472" rpy="3.14159 0 2.35619"/>
+    <parent link="マイクロサーボの固定_v1"/>
+    <child link="マイクロサーボの固定_v1_コンポーネント1_10"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from base_link to マイクロサーボの固定_v1 -->
+  <joint name="base_link_to_マイクロサーボの固定_v1" type="fixed">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <parent link="base_link"/>
+    <child link="マイクロサーボの固定_v1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link gwsサーボの固定_ボディ__v2 -->
+  <link name="gwsサーボの固定_ボディ__v2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+  </link>
+  <!-- Link gwsサーボの固定_ボディ__v2_gwsservo_case -->
+  <link name="gwsサーボの固定_ボディ__v2_gwsservo_case">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part gwsservo_case -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/gwsservo_case.stl"/>
+      </geometry>
+      <material name="gwsservo_case_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/gwsservo_case.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from gwsサーボの固定_ボディ__v2 to gwsサーボの固定_ボディ__v2_gwsservo_case -->
+  <joint name="gwsサーボの固定_ボディ__v2_gwsservo_case_fixed" type="fixed">
+    <origin xyz="-0.0582052 -0.0378052 0.0045" rpy="0 0 -2.35619"/>
+    <parent link="gwsサーボの固定_ボディ__v2"/>
+    <child link="gwsサーボの固定_ボディ__v2_gwsservo_case"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link gwsサーボの固定_ボディ__v2_コンポーネント1_11 -->
+  <link name="gwsサーボの固定_ボディ__v2_コンポーネント1_11">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part コンポーネント1_11 -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1__2.stl"/>
+      </geometry>
+      <material name="コンポーネント1_11_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1__2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from gwsサーボの固定_ボディ__v2 to gwsサーボの固定_ボディ__v2_コンポーネント1_11 -->
+  <joint name="gwsサーボの固定_ボディ__v2_コンポーネント1_11_fixed" type="fixed">
+    <origin xyz="-0.045 -0.045 0.04245" rpy="-3.14159 0 -2.35619"/>
+    <parent link="gwsサーボの固定_ボディ__v2"/>
+    <child link="gwsサーボの固定_ボディ__v2_コンポーネント1_11"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link gwsサーボの固定_ボディ__v2_コンポーネント1_12 -->
+  <link name="gwsサーボの固定_ボディ__v2_コンポーネント1_12">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part コンポーネント1_12 -->
+    <visual>
+      <origin xyz="0 0 -0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1.stl"/>
+      </geometry>
+      <material name="コンポーネント1_12_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from gwsサーボの固定_ボディ__v2 to gwsサーボの固定_ボディ__v2_コンポーネント1_12 -->
+  <joint name="gwsサーボの固定_ボディ__v2_コンポーネント1_12_fixed" type="fixed">
+    <origin xyz="-0.0650995 -0.0550939 0.0045" rpy="0 0 -2.35619"/>
+    <parent link="gwsサーボの固定_ボディ__v2"/>
+    <child link="gwsサーボの固定_ボディ__v2_コンポーネント1_12"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from base_link to gwsサーボの固定_ボディ__v2 -->
+  <joint name="base_link_to_gwsサーボの固定_ボディ__v2" type="fixed">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <parent link="base_link"/>
+    <child link="gwsサーボの固定_ボディ__v2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link gwsサーボの固定_ボディ__v2__1 -->
+  <link name="gwsサーボの固定_ボディ__v2__1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+  </link>
+  <!-- Link gwsサーボの固定_ボディ__v2__1_gwsservo_case_2 -->
+  <link name="gwsサーボの固定_ボディ__v2__1_gwsservo_case_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part gwsservo_case_2 -->
+    <visual>
+      <origin xyz="0 0 -0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/gwsservo_case.stl"/>
+      </geometry>
+      <material name="gwsservo_case_2_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/gwsservo_case.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from gwsサーボの固定_ボディ__v2__1 to gwsサーボの固定_ボディ__v2__1_gwsservo_case_2 -->
+  <joint name="gwsサーボの固定_ボディ__v2__1_gwsservo_case_2_fixed" type="fixed">
+    <origin xyz="-0.0378052 0.0582052 0.0045" rpy="-0 0 2.35619"/>
+    <parent link="gwsサーボの固定_ボディ__v2__1"/>
+    <child link="gwsサーボの固定_ボディ__v2__1_gwsservo_case_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link gwsサーボの固定_ボディ__v2__1_コンポーネント1_13 -->
+  <link name="gwsサーボの固定_ボディ__v2__1_コンポーネント1_13">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part コンポーネント1_13 -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1__2.stl"/>
+      </geometry>
+      <material name="コンポーネント1_13_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1__2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from gwsサーボの固定_ボディ__v2__1 to gwsサーボの固定_ボディ__v2__1_コンポーネント1_13 -->
+  <joint name="gwsサーボの固定_ボディ__v2__1_コンポーネント1_13_fixed" type="fixed">
+    <origin xyz="-0.045 0.045 0.04245" rpy="3.14159 0 2.35619"/>
+    <parent link="gwsサーボの固定_ボディ__v2__1"/>
+    <child link="gwsサーボの固定_ボディ__v2__1_コンポーネント1_13"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link gwsサーボの固定_ボディ__v2__1_コンポーネント1_14 -->
+  <link name="gwsサーボの固定_ボディ__v2__1_コンポーネント1_14">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part コンポーネント1_14 -->
+    <visual>
+      <origin xyz="0 0 -0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1.stl"/>
+      </geometry>
+      <material name="コンポーネント1_14_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from gwsサーボの固定_ボディ__v2__1 to gwsサーボの固定_ボディ__v2__1_コンポーネント1_14 -->
+  <joint name="gwsサーボの固定_ボディ__v2__1_コンポーネント1_14_fixed" type="fixed">
+    <origin xyz="-0.0550939 0.0650995 0.0045" rpy="-0 0 2.35619"/>
+    <parent link="gwsサーボの固定_ボディ__v2__1"/>
+    <child link="gwsサーボの固定_ボディ__v2__1_コンポーネント1_14"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from base_link to gwsサーボの固定_ボディ__v2__1 -->
+  <joint name="base_link_to_gwsサーボの固定_ボディ__v2__1" type="fixed">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <parent link="base_link"/>
+    <child link="gwsサーボの固定_ボディ__v2__1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link gwsサーボの固定_ボディ__v2__2 -->
+  <link name="gwsサーボの固定_ボディ__v2__2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+  </link>
+  <!-- Link gwsサーボの固定_ボディ__v2__2_gwsservo_case_3 -->
+  <link name="gwsサーボの固定_ボディ__v2__2_gwsservo_case_3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part gwsservo_case_3 -->
+    <visual>
+      <origin xyz="0 0 -0" rpy="-0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/gwsservo_case.stl"/>
+      </geometry>
+      <material name="gwsservo_case_3_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0" rpy="-0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/gwsservo_case.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from gwsサーボの固定_ボディ__v2__2 to gwsサーボの固定_ボディ__v2__2_gwsservo_case_3 -->
+  <joint name="gwsサーボの固定_ボディ__v2__2_gwsservo_case_3_fixed" type="fixed">
+    <origin xyz="0.0582052 0.0378052 0.0045" rpy="-0 -0 0.785398"/>
+    <parent link="gwsサーボの固定_ボディ__v2__2"/>
+    <child link="gwsサーボの固定_ボディ__v2__2_gwsservo_case_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link gwsサーボの固定_ボディ__v2__2_コンポーネント1_15 -->
+  <link name="gwsサーボの固定_ボディ__v2__2_コンポーネント1_15">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part コンポーネント1_15 -->
+    <visual>
+      <origin xyz="0 -0 -0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1__2.stl"/>
+      </geometry>
+      <material name="コンポーネント1_15_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 -0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1__2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from gwsサーボの固定_ボディ__v2__2 to gwsサーボの固定_ボディ__v2__2_コンポーネント1_15 -->
+  <joint name="gwsサーボの固定_ボディ__v2__2_コンポーネント1_15_fixed" type="fixed">
+    <origin xyz="0.045 0.045 0.04245" rpy="3.14159 -0 0.785398"/>
+    <parent link="gwsサーボの固定_ボディ__v2__2"/>
+    <child link="gwsサーボの固定_ボディ__v2__2_コンポーネント1_15"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link gwsサーボの固定_ボディ__v2__2_コンポーネント1_16 -->
+  <link name="gwsサーボの固定_ボディ__v2__2_コンポーネント1_16">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part コンポーネント1_16 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="-0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1.stl"/>
+      </geometry>
+      <material name="コンポーネント1_16_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from gwsサーボの固定_ボディ__v2__2 to gwsサーボの固定_ボディ__v2__2_コンポーネント1_16 -->
+  <joint name="gwsサーボの固定_ボディ__v2__2_コンポーネント1_16_fixed" type="fixed">
+    <origin xyz="0.0650995 0.0550939 0.0045" rpy="-0 -0 0.785398"/>
+    <parent link="gwsサーボの固定_ボディ__v2__2"/>
+    <child link="gwsサーボの固定_ボディ__v2__2_コンポーネント1_16"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from base_link to gwsサーボの固定_ボディ__v2__2 -->
+  <joint name="base_link_to_gwsサーボの固定_ボディ__v2__2" type="fixed">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <parent link="base_link"/>
+    <child link="gwsサーボの固定_ボディ__v2__2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link gwsサーボの固定_ボディ__v2__3 -->
+  <link name="gwsサーボの固定_ボディ__v2__3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+  </link>
+  <!-- Link gwsサーボの固定_ボディ__v2__3_gwsservo_case_4 -->
+  <link name="gwsサーボの固定_ボディ__v2__3_gwsservo_case_4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part gwsservo_case_4 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/gwsservo_case.stl"/>
+      </geometry>
+      <material name="gwsservo_case_4_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/gwsservo_case.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from gwsサーボの固定_ボディ__v2__3 to gwsサーボの固定_ボディ__v2__3_gwsservo_case_4 -->
+  <joint name="gwsサーボの固定_ボディ__v2__3_gwsservo_case_4_fixed" type="fixed">
+    <origin xyz="0.0378052 -0.0582052 0.0045" rpy="0 -0 -0.785398"/>
+    <parent link="gwsサーボの固定_ボディ__v2__3"/>
+    <child link="gwsサーボの固定_ボディ__v2__3_gwsservo_case_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link gwsサーボの固定_ボディ__v2__3_コンポーネント1_17 -->
+  <link name="gwsサーボの固定_ボディ__v2__3_コンポーネント1_17">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part コンポーネント1_17 -->
+    <visual>
+      <origin xyz="0 -0 -0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1__2.stl"/>
+      </geometry>
+      <material name="コンポーネント1_17_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 -0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1__2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from gwsサーボの固定_ボディ__v2__3 to gwsサーボの固定_ボディ__v2__3_コンポーネント1_17 -->
+  <joint name="gwsサーボの固定_ボディ__v2__3_コンポーネント1_17_fixed" type="fixed">
+    <origin xyz="0.045 -0.045 0.04245" rpy="-3.14159 -0 -0.785398"/>
+    <parent link="gwsサーボの固定_ボディ__v2__3"/>
+    <child link="gwsサーボの固定_ボディ__v2__3_コンポーネント1_17"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link gwsサーボの固定_ボディ__v2__3_コンポーネント1_18 -->
+  <link name="gwsサーボの固定_ボディ__v2__3_コンポーネント1_18">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part コンポーネント1_18 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1.stl"/>
+      </geometry>
+      <material name="コンポーネント1_18_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/コンポーネント1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from gwsサーボの固定_ボディ__v2__3 to gwsサーボの固定_ボディ__v2__3_コンポーネント1_18 -->
+  <joint name="gwsサーボの固定_ボディ__v2__3_コンポーネント1_18_fixed" type="fixed">
+    <origin xyz="0.0550939 -0.0650995 0.0045" rpy="0 -0 -0.785398"/>
+    <parent link="gwsサーボの固定_ボディ__v2__3"/>
+    <child link="gwsサーボの固定_ボディ__v2__3_コンポーネント1_18"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from base_link to gwsサーボの固定_ボディ__v2__3 -->
+  <joint name="base_link_to_gwsサーボの固定_ボディ__v2__3" type="fixed">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <parent link="base_link"/>
+    <child link="gwsサーボの固定_ボディ__v2__3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+</robot>

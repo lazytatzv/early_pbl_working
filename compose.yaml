@@ -1,0 +1,10 @@
+services:
+  pybullet-sim:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: quadruped-pybullet-sim
+    volumes:
+      - .:/workspace
+    # デフォルトのコマンドを実行
+    command: python scripts/pybullet_simulation.py

@@ -1,0 +1,10 @@
+{
+    "documentId": "000000000000000000000000",
+    "workspaceId": "000000000000000000000000",
+    "elementId": "000000000000000000000000",
+    "outputFormat": "urdf",
+    "drawFrames": false,
+    "drawCollisions": false,
+    "useFixedLinks": true,
+    "addDummyBaseLink": true
+}
